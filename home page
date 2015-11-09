@@ -1,0 +1,38 @@
+Enter file contents here<html>
+<head>
+<title>mtg勝率計算ツール</title>
+<STYLE type="text/css">
+<!--
+.scr{
+overflow: scroll;
+width: 15cm;
+height: 2cm;
+}
+body{
+background-image: url(jace.jpg);
+color: #FFFFFF;
+}
+a:link{
+color:#FFFFFF;
+}
+a:visited{
+color:#FFFFFF;
+}
+-->
+</STYLE>
+</head>
+<body>
+<h1 align=center>mtg勝率計算ツール</h1>
+<div style="text-align:center;">
+<h2>mtgの勝率計算ツールです。<br>
+<a target="_blank" href="https://www.wizards.com/magic/planeswalkerpoints">プレインズウォーカー・ポイント</a>の履歴を下のボックスにコピー＆ペーストし、表示ボタンを押すと表示されます。<br>
+</h2>
+<h3><form method="POST" action= >
+<textarea div class="scr" div style="margin-right:auto; margin-left:auto; width: 15cm name="DATA"></textarea><br>
+<input type="submit" value=表示>
+<input type="reset" value=取り消し>
+</h3>
+</form>
+</div>
+</head>
+</html>
