@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>JavaScriptで文字列の解析練習</title>
+<script type="text/javascript">
+function dispTextarea(){
+
+	var tarea  = document.inputtext.msg.value;
+	var lines = tarea.split( '\n' );
+	var text = '';
+	var textarray;
+	var wins = 0;
+	var lose = 0;
+	var htmltext = '';
+ 
+    for ( var i = 0; i < lines.length; i++ ) {
+      // 空行は無視する
+      if ( lines[i] == '' ) {
+        continue;
+      }
+      textarray = lines[i].split("	");
+      if ( textarray[1] == "勝利"){
+      	wins = wins + 1;
+      } else if( textarray[1] == "敗北"){
+      	lose = lose + 1;      
+      }
+    }
+    
+    htmltext = "勝利数:" + wins + ":敗北数：" + lose;
+
+    document.getElementById("result").innerText = htmltext;
+
+
+}
+</script>
+</head>
+<body>
+<form name="inputtext">
+  <div>
+    <p>下に入力した内容が解析されます</p>
+    <textarea name="msg" cols=40 rows=4></textarea>
+  </div>
+  <div id="result">
+
+  </div>
+<input type="button" value="確認" onclick="dispTextarea()">
+</form>
+</body>
+</html>
